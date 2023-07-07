@@ -1,5 +1,5 @@
-// 입력예시 HelloWorld!
-// 출력예시 HelloWorld!
+// 입력 # HelloWorld!
+// 출력 # HelloWorld!
 
 const readline = require('readline');
 // readline모듈은 자스 내장 모듈로, readable 스트림에서 한 줄씩 입출력을 처리하도록 도와줌
