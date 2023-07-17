@@ -49,4 +49,3 @@ function solution(participant, completion) {
     return answer;
 }
 */
-*/
