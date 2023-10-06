@@ -6,8 +6,35 @@
 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.
 */
 
-// 작성중...
 function solution(citations) {
-    var answer = 0;
-    return answer;
+
+    // 값이 큰 순서대로 정렬
+    citations.sort((a, b) => b - a);
+
+    let answers = 0;
+    for (let i = 0; i < citations.length; i++) {
+        // 현재 원소의 값이 현재 인덱스보다 크면 H-Index의 조건 만족
+        if (i < citations[i]) {
+            answers++;
+        }
+    }
+
+    return answers;
 }
+
+/*
+다른 풀이
+function solution(citations) {
+     citations = citations.sort(sorting);
+     var i = 0;
+     while(i + 1 <= citations[i]){
+         i++;
+     }
+     return i;
+
+
+     function sorting(a, b){
+         return b - a;
+     }
+}
+*/
