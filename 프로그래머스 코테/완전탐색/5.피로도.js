@@ -6,8 +6,26 @@
 최대 던전 수를 return 하도록 solution 함수를 완성해주세요.
 */
 
-// 작성ing
+// 풀이 해석
 function solution(k, dungeons) {
-    var answer = -1;
-    return answer;
+  let answer = 0;
+  const visited = new Array(dungeons.length).fill(false)
+
+  function DFS(hp, L) { // hp는 현재 체력, L은 방문한 던전 수
+    // 던전목록을 순회하며 방문 가능한지 확인
+    for (let i = 0; i < dungeons.length; i++) {
+
+      // 방문하지 않았고, 방문 가능한 경우 진입
+      if (!visited[i] && dungeons[i][0] <= hp) {
+        visited[i] = true; // 방문한 곳
+        DFS(hp - dungeons[i][1], L + 1); // 재귀 호출
+        visited[i] = false;
+      }
+    }
+    answer = Math.max(answer, L); // 최대 던전 수 업뎃
+  }
+
+  DFS(k, 0); // 초기체력 K로 DFS를 시작해서 최대 던전 수 탐색
+
+  return answer;
 }
