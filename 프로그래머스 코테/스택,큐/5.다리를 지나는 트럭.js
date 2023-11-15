@@ -29,7 +29,7 @@ function solution(bridge_length, weight, truck_weights) {
       // 현재 다리의 트럭과 새로운 트럭무게를 합한 값이 weight보다 작거나 같은지 확인
       // 두 조건이 모두 만족할 때 새로운 트럭 진입
       if (truck_weights.length > 0 && weight >= truck_weights[0]) {
-        const truckWeight = truck_weights.shift();
+        const truckWeight = truck_weights.shift(); // 무게 가져오고 제거
         onBridge.push({ weight: truckWeight, timeOnBridge: answer });
         weight -= truckWeight;
       }
