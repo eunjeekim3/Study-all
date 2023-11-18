@@ -1,4 +1,4 @@
-// 레벨 2
+// 레벨 3
 // https://school.programmers.co.kr/learn/courses/30/lessons/43238?language=javascript
 
 /*
