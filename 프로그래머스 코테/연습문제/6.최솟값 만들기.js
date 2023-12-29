@@ -6,22 +6,27 @@
 */
 
 // 작성ing...
-function solution(A,B){
+function getMinSum(A, B) {
   var answer = 0;
-
-  // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-  console.log('Hello Javascript')
+  var A_sorted = A.sort(function (a, b){ a - b });
+  var B_sorted = B.sort(function (a, b) { a - b }).reverse();
+  for (var i = 0; i < A.length; i++){
+    var a = 0;
+    a = A_sorted[i] * B_sorted[i]
+    answer += a;
+  }
 
   return answer;
 }
 
 // 다른 풀이
-function solution(s) {
-  var answer = '';
- let result = s.split(' ');
-
- let result2 = result.map(x=> x.charAt(0).toUpperCase() + x.slice(1).toLowerCase());
-
- answer = result2.join(" ")
+function solution(A,B){
+  var answer = 0;
+  A.sort((a,b)=> a-b);
+  B.sort((a,b)=> b-a); 
+  
+ for (let i = 0; i < A.length; i++) {
+     answer += A[i]*B[i];
+ }
   return answer;
 }
