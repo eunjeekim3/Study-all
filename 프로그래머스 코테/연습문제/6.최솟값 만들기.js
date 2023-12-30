@@ -5,7 +5,7 @@
 배열 A, B가 주어질 때 최종적으로 누적된 최솟값을 return 하는 solution 함수를 완성해 주세요.
 */
 
-// 작성ing...
+// 풀이
 function getMinSum(A, B) {
   var answer = 0;
   var A_sorted = A.sort(function (a, b){ a - b });
