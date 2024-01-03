@@ -1,5 +1,5 @@
-// 입력 # HelloWorld!
-// 출력 # HelloWorld!
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181952?language=java
 
 const readline = require('readline');
 // readline모듈은 자스 내장 모듈로, readable 스트림에서 한 줄씩 입출력을 처리하도록 도와줌
@@ -17,3 +17,15 @@ let str = "HelloWord!";
 console.log(str);
 이렇게하면 똑같은 결과가 나오지만 프로그래머스에서는 정답처리되지않음...
 */
+
+// Java
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        
+        System.out.println(a);
+    }
+}
