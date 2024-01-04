@@ -1,5 +1,5 @@
-// 입력 # string 5
-// 출력 # stringstringstringstringstring
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181950?language=java
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -20,3 +20,20 @@ rl.on('line', function (line) {
         // process.stdout.write를 사용해서 줄바꿈없이 출력
     }
 });
+
+// JAVA
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        int n = sc.nextInt();
+        
+        for (int i=0; i<n; i++) {
+            System.out.printf(str);
+            // System.out.println(str.repeat(n)); 다른사람은 repeat함수 사용했음
+        }
+        
+    }
+}
