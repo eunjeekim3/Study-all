@@ -24,3 +24,17 @@ rl.on('line', function (line) {
     // 스프레드문법 ...input을 사용하면 문자열을 개별 문자로 분해해서 새로운 배열을 생성함.
     // forEach()메소드로 배열의 각 요소를 반복
 });
+
+// 자바
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        
+        for (int i=0; i<a.length(); i++) {
+            System.out.println(a.charAt(i));
+        }
+    }
+}

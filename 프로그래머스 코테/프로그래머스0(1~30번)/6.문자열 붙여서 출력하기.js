@@ -1,7 +1,5 @@
-// 입력 #1 apple pen
-// 출력 #1 applepen
-// 입력 #2 Hello World!
-// 출력 #3 HelloWorld!
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181946?language=java
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -25,3 +23,15 @@ rl.on('line', function (line) {
     const result2 = str2.split(" ").join("");
      process.stdout.write(result2);
 });
+
+// 자바
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
+        System.out.print(a + b);
+    }
+}
