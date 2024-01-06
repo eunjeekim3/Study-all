@@ -1,8 +1,5 @@
-/*
-문자열 my_string, overwrite_string과 정수 s가 주어집니다. 
-문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을 
-문자열 overwrite_string으로 바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
-*/
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181943?language=java
 
 function solution(my_string, overwrite_string, s) {
     // splice()는 배열에서 요소를 추가, 삭제 또는 교체하는 메소드.
@@ -16,4 +13,20 @@ function solution(my_string, overwrite_string, s) {
     str.splice(s, overwrite_string.length, overwrite_string)
     return str.join("");
     // 전개연산자를 통해 개별요소로 분해된 요소를 join으로 다시 결합
+}
+
+// 자바
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String answer = "";
+        
+        int len01 = overwrite_string.length();
+        int len02 = my_string.length();
+        String sub01 = my_string.substring(0, s);
+        String sub02 = my_string.substring((s+len01), len02);
+        
+        answer += sub01 + overwrite_string + sub02;
+        
+        return answer;
+    }
 }

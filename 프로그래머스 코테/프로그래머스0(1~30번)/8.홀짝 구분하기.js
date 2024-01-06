@@ -1,7 +1,5 @@
-// 입력 #1 100
-// 출력 #1 100 is even
-// 입력 #2 1
-// 출력 #3 1 is odd
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181944?language=java
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -26,3 +24,19 @@ rl.on('line', function (line) {
     console.log(answer);
 });
 
+// 자바
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        if (n % 2 == 0) {
+            System.out.printf("%d is even", n);
+        } else {
+            System.out.printf("%d is odd", n);
+        }
+        //System.out.print(n + " is "+(n % 2 == 0 ? "even" : "odd")); 이렇게 쓴사람도 있음
+    }
+}
