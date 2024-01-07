@@ -1,8 +1,5 @@
-/*
-문자열 my_string과 정수 k가 주어질 때, 
-my_string을 k번 반복한 문자열을 return 하는 
-solution 함수를 작성해 주세요.
-*/
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181940?language=java
 
 function solution(my_string, k) {
     let result = "";
@@ -12,4 +9,18 @@ function solution(my_string, k) {
     }
     
     return result;
+}
+
+// 자바
+class Solution {
+    public String solution(String my_string, int k) {
+        String answer = "";
+        
+        for(int i=0; i<k; i++) {
+            answer = answer + my_string;
+            //return my_string.repeat(k); 이렇게도 함...
+        }
+        
+        return answer;
+    }
 }

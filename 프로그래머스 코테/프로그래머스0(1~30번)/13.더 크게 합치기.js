@@ -1,8 +1,5 @@
-/*
-양의 정수 a와 b가 주어졌을 때, a ⊕ b와 b ⊕ a 중 더 큰 값을 
-return 하는 solution 함수를 완성해 주세요.
-단, a ⊕ b와 b ⊕ a가 같다면 a ⊕ b를 return 합니다.
-*/
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181939?language=java
 
 function solution(a, b) {
     const atob = String(a) + String(b);
@@ -11,4 +8,28 @@ function solution(a, b) {
     return atob >= btoa ? Number(atob) : Number(btoa);
     // atob >= btoa가 true인 경우 : Number(atob) 반환
     // atob >= btoa가 false인 경우 : Number(btoa) 반환
+}
+
+// 자바
+class Solution {
+    public int solution(int a, int b) {
+        String ab = String.valueOf(a) + String.valueOf(b);
+        String ba = String.valueOf(b) + String.valueOf(a);
+        
+        int abValue = Integer.parseInt(ab);
+        int baValue = Integer.parseInt(ba);
+        
+        if (abValue >= baValue) {
+            return abValue;
+        } else {
+            return baValue;
+        }
+
+        /*
+        다른 풀이
+        int aLong = Integer.parseInt(""+a+b);
+        int bLong = Integer.parseInt(""+b+a);
+        answer = aLong > bLong ? aLong : bLong;
+        */
+    }
 }
