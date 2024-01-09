@@ -1,5 +1,5 @@
-// 입력 # abcde
-// 출력 # a / b / c / d / e
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181945
 
 const readline = require('readline');
 const rl = readline.createInterface({
