@@ -13,12 +13,3 @@ rl.on('close', function () {
     // 특수문자를 출력하기위해서는 \를 입력해야됨
 });
 
-// 자바
-import java.util.Scanner;
-
-public class Solution {
-    public static void main(String[] args) {
-        //System.out.printf("!@#$%^&*(\'"<>?:;");             
-        System.out.print("!@#$%^&*(\\'\"<>?:;");
-    }
-}

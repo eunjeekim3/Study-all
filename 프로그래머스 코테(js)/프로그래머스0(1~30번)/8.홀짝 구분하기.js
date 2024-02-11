@@ -23,20 +23,3 @@ rl.on('line', function (line) {
     
     console.log(answer);
 });
-
-// 자바
-import java.util.Scanner;
-
-public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        
-        if (n % 2 == 0) {
-            System.out.printf("%d is even", n);
-        } else {
-            System.out.printf("%d is odd", n);
-        }
-        //System.out.print(n + " is "+(n % 2 == 0 ? "even" : "odd")); 이렇게 쓴사람도 있음
-    }
-}

@@ -18,16 +18,3 @@ const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = numbers.map((num) => num * 2);
 console.log(doubledNumbers); // 출력: [2, 4, 6, 8, 10]
 */
-
-// 자바
-class Solution {
-    public String solution(String str1, String str2) {
-        String answer = "";
-        
-        for (int i=0; i<str1.length(); i++) {
-            answer = answer + str1.charAt(i) + str2.charAt(i);
-        }
-        
-        return answer;
-    }
-}

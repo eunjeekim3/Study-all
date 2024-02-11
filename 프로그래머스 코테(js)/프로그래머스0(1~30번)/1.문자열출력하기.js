@@ -18,14 +18,3 @@ console.log(str);
 이렇게하면 똑같은 결과가 나오지만 프로그래머스에서는 정답처리되지않음...
 */
 
-// Java
-import java.util.Scanner;
-
-public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String a = sc.next();
-        
-        System.out.println(a);
-    }
-}
