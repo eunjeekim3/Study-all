@@ -11,16 +11,3 @@ function solution(my_string, k) {
     return result;
 }
 
-// 자바
-class Solution {
-    public String solution(String my_string, int k) {
-        String answer = "";
-        
-        for(int i=0; i<k; i++) {
-            answer = answer + my_string;
-            //return my_string.repeat(k); 이렇게도 함...
-        }
-        
-        return answer;
-    }
-}

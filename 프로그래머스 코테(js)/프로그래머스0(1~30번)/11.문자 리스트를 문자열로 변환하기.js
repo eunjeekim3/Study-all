@@ -5,13 +5,3 @@ function solution(arr) {
     return arr.join("");
 }
 
-// 자바
-class Solution {
-    public String solution(String[] arr) {
-        String answer = "";
-        
-        answer = String.join("", arr);
-        
-        return answer;
-    }
-}

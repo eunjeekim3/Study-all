@@ -1,0 +1,12 @@
+// 레벨 0
+// https://school.programmers.co.kr/learn/courses/30/lessons/181942?language=java
+
+class Solution {
+    public String solution(String[] arr) {
+        String answer = "";
+
+        answer = String.join("", arr);
+
+        return answer;
+    }
+}
