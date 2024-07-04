@@ -1,26 +1,24 @@
 /*
-같은 눈이 3개가 나오면 10,000원+(같은 눈)×1,000원의 상금을 받게 된다.
-같은 눈이 2개만 나오는 경우에는 1,000원+(같은 눈)×100원의 상금을 받게 된다.
-모두 다른 눈이 나오는 경우에는 (그 중 가장 큰 눈)×100원의 상금을 받게 된다.
+훈제오리구이를 시작하는 시각과 오븐구이를 하는 데 필요한 시간이 분단위로 주어졌을 때, 오븐구이가 끝나는 시각을 계산하는 프로그램을 작성하시오.
+
  */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+ import java.io.BufferedReader;
+ import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.io.IOException;
-
-public class Main {
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int A = Integer.parseInt(br.readLine());
-        int B = Integer.parseInt(br.readLine());
-        int C = Integer.parseInt(br.readLine());
+ import java.io.IOException;
  
+ public class Main {
+ 
+     public static void main(String[] args) throws IOException {
+        Integer[] a = new Integer[]{1, 2, 3}; // int[] 대신 Integer[] 사용
+        Arrays.sort(a, (s1, s2) -> (s2.toString() + s1.toString()).compareTo(s1.toString() + s2.toString())); // 비교자 수정
+
         
- 
-        System.out.println(hour + " " + minute);
-    }
-}
+        System.out.println(Arrays.toString(a));
 
+     }
+ }
+ 
+ 
