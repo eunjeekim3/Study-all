@@ -1,8 +1,5 @@
 /*
-총 N개의 정수가 주어졌을 때, 정수 v가 몇 개인지 구하는 프로그램을 작성하시오.
-
-첫째 줄에 정수의 개수 N(1 ≤ N ≤ 100)이 주어진다. 둘째 줄에는 정수가 공백으로 구분되어져있다. 셋째 줄에는 찾으려고 하는 정수 v가 주어진다. 
-입력으로 주어지는 정수와 v는 -100보다 크거나 같으며, 100보다 작거나 같다.
+N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.
  */
 
 import java.io.BufferedReader;
@@ -10,20 +7,65 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.io.IOException;
- 
- public class Main {
- 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int a = Integer.parseInt(br.readLine());
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        int b = Integer.parseInt(st.nextToken());
+// public class Main {
 
-        br.close();
+//     public static void main(String[] args) throws IOException {
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println();
-    }
+//         // 첫 번째 줄: 정수의 개수 n
+//         int n = Integer.parseInt(br.readLine());
+
+//         // 두 번째 줄: 공백으로 구분된 n개의 정수
+//         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//         int[] numbers = new int[n];
+//         for (int i = 0; i < n; i++) {
+//             numbers[i] = Integer.parseInt(st.nextToken());
+//         }
+
+//         int max = numbers[0];
+//         int min = numbers[0];
+
+//         for (int i = 1; i < n; i++) {
+//             if (numbers[i] > max) {
+//                 max = numbers[i];
+//             }
+//             if (numbers[i] < min) {
+//                 min = numbers[i];
+//             }
+//         }
+
+//         br.close();
+
+//         System.out.println(min + " " + max);
+//     }
+// }
+public class Main {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt(); // 배열 길이
+		
+		int M = sc.nextInt(); // 반복 횟수
+		
+		int[] arr = new int[N];
+		
+		for(int x = 0 ; x < M ; x++) { // 
+			int i = sc.nextInt();
+			int j = sc.nextInt();
+			int k = sc.nextInt();
+			
+			for(int y = i-1 ; y < j ; y++) { // 입력 받은 줄에서의 반복
+				arr[y] = k;
+			}
+			
+		}
+		
+		for(int x = 0 ; x < N ; x++) {
+			System.out.print(arr[x] + " ");
+		}
+		
+	}
 }
- 
  
