@@ -114,3 +114,49 @@ double a = 3.0F; // 자동으로 형변환해주어 에러가 나지 않음.
 float b = 3.0; // 자동형변환이 안됨. 표현범위가 좁은 -> 넓은 타입 변환만 허용 
 // 즉 형변환 가능순서 byte -> short/char -> int -> long -> float -> double 
 // 정수 -> 실수 형변환만 가능 
+
+[String -> int]
+String s = "12345";
+int i = Integer.parseInt(s);
+int i = Integer.valueOf(s);
+
+[int -> String]
+int i = 12345;
+String s = Integer.toString(i);
+String s = String.valueOf(i);
+
+[Char -> int]
+Char ch = '5';
+int i = (int)(ch - '0'); // 단순 형변환만하면 해당 아스키코드값으로 출력됨. 원하는 값은 0을 더하거나 빼야됨.
+
+[int -> Char]
+int i = 5;
+char ch = (char)(i + '0');
+
+[String -> Char]
+char ch1 = '5';
+char[] ch2 = {'a','b','c'};
+String s1 = String.valueOf(ch1); // '5'
+String s2 = String.valueOf(ch2); // 'abc'
+
+[Char -> String]
+String s1 = "1";
+String s2 = "1234";
+char ch1 = s1.charAt(0); // '1'
+char[] ch2 = s2.toCharArray(); // 1234
+
+[Double/Float -> int]
+double d = 1010.10101010; // double타입은 64비트로 실수를 표현
+float f = 1010.101010f; // float타입은 32비트로 실수를 표현, 리터럴에 f를 붙혀 실수임을 표기해야함.
+int i;
+i = (int)d;
+i = (int)f; // 소수점 뒷자리들은 버려짐
+
+[int -> Double/Float]
+int i= 1234;
+double d = (double)i; 
+float f = (float)i; // 소수점 첫째자리까지 출력됨 (1234.0)
+
+[float -> String]
+float floatValue = 3.14f;
+String stringValue = Float.toString(floatValue); // 3.14
